@@ -118,7 +118,7 @@ The framework will initiate by collecting client consent, authenticating the use
 It will then conduct SQL injection testing with SQLMap, identifying and exploiting any vulnerabilities found.
 
 => Exploit Vulnerabilities:
-Any discovered vulnerabilities will be exploited using Metasploit, automating the exploitation process.
+Any discovered vulnerabilities will be exploited using Metasploit, automating the exploitation process. The information asked in the tool can be answered by running Metasploit on the machine.
 
 => Execute Post-Exploitation Tasks:
 After exploitation, the framework will carry out post-exploitation tasks, such as privilege escalation and establishing persistence.
@@ -126,22 +126,11 @@ After exploitation, the framework will carry out post-exploitation tasks, such a
 => Generate Report and Log Activities:
 Finally, it will compile a detailed report and log all activities throughout the testing process.
 
+# Timeouts of each script: 
 
+These are the maximum time taken - 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+1. SQL Map: 1200
+2. Nmap: 600
+3. Exploitation: 1200
+4. Post-exploitation: 1200
