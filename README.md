@@ -63,6 +63,84 @@ Automatedtool/
 
 # Installation Guide:
 
+1) First clone the repository in the local machine, and run the below-given command:
+   
+   git clone https://github.com/prernanaga/Automated-Penetration-Testing-Framework.git
+
+3) Then go to the location where the file is saved in your Kali machine:
+   
+   cd Downloads/automated_pt_framework/automated-pt-framework-main/Automatedtool   (this path is according to my machine)
+
+4) Installing Python Dependencies(if any): If your project has a requirements.txt file, install the necessary packages with:
+   
+   pip install -r requirements.txt
+   
+Set Permissions: Make sure you have the required permissions to run system-level tools like Metasploit, Nmap, and SQLMap.
+
+4) Obtain Client Consent: Before starting any tests, you must collect and store the client's consent using the consent_management.py module:
+
+   python3 consent_management.py
+   
+This script will prompt you to enter the client’s name, target IP address, and scope of testing. The consent information will be saved in a timestamped file within the consent_forms/ folder.
+
+5) To initiate the penetration testing process, execute the master.py script:
+
+   python3 master.py
+   
+This script will:
+
+A. Authenticate the user using a hashed password.         
+
+B. Request the target IP or URL for scanning. 
+
+C. Perform Nmap scanning, SQLMap testing, exploitation, and post-exploitation steps in order. 
+
+D. Log all activities and create a final report.
+
+You can also run specific modules to perform particular tasks:
+
+=> Run a Nmap scan: python3 nmap_scan.py
+
+=> Run an SQLMap scan: python3 sqlmap_scan.py
+
+=> Run the Exploitation Module: python3 exploit_module.py
+
+6) Viewing Logs and Reports
+
+All actions are logged in the pentest_framework.log file. The final penetration test report will be saved as final_report.txt.
+
+#  Summary workflow of the scanning
+
+=> Run the master.py script:
+The framework will initiate by collecting client consent, authenticating the user, and starting the network scan using Nmap.
+
+=> Perform SQL Injection Tests:
+It will then conduct SQL injection testing with SQLMap, identifying and exploiting any vulnerabilities found.
+
+=> Exploit Vulnerabilities:
+Any discovered vulnerabilities will be exploited using Metasploit, automating the exploitation process.
+
+=> Execute Post-Exploitation Tasks:
+After exploitation, the framework will carry out post-exploitation tasks, such as privilege escalation and establishing persistence.
+
+=> Generate Report and Log Activities:
+Finally, it will compile a detailed report and log all activities throughout the testing process.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
