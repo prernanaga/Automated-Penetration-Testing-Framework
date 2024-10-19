@@ -131,6 +131,6 @@ Finally, it will compile a detailed report and log all activities throughout the
 These are the maximum time taken - 
 
 1. SQL Map: 1200
-2. Nmap: 600
+2. Nmap: 300
 3. Exploitation: 1200
 4. Post-exploitation: 1200
